@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreWebApi6.Models;
 using Microsoft.EntityFrameworkCore;
@@ -46,9 +46,6 @@ namespace AspNetCoreWebApi6.Controllers
         [HttpPost]
         public async Task<ActionResult<Weapon>> PostWeapon(Weapon weapon)
         {
-            // Réinitialiser la séquence d'incrémentation automatique de l'ID avant d'ajouter la nouvelle arme
-            await _dbContext.Database.ExecuteSqlRawAsync("DBCC CHECKIDENT ('Weapons', RESEED)");
-
             // Ajouter la nouvelle arme
             _dbContext.Weapons.Add(weapon);
             await _dbContext.SaveChangesAsync();
