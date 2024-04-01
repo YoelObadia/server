@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "yG3ORbBJVbRfbhS4b89ObuKXyXxQ8fOcMH1hWPsD6GQ=",
+  "Source": "WeaponServer",
+  "BasePath": "_content/WeaponServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
