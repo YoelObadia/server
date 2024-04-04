@@ -2,6 +2,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreWebApi6.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AspNetCoreWebApi6.Controllers
 {
@@ -28,7 +32,7 @@ namespace AspNetCoreWebApi6.Controllers
             return await _dbContext.Weapons.ToListAsync();
         }
 
-        // GET: api/Weapon/{weapon.id}
+        // GET: api/Weapon/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<Weapon>> GetWeapon(int id)
         {
@@ -46,14 +50,13 @@ namespace AspNetCoreWebApi6.Controllers
         [HttpPost]
         public async Task<ActionResult<Weapon>> PostWeapon(Weapon weapon)
         {
-            // Ajouter la nouvelle arme
             _dbContext.Weapons.Add(weapon);
             await _dbContext.SaveChangesAsync();
 
             return CreatedAtAction("GetWeapon", new { id = weapon.Id }, weapon);
         }
 
-        // PUT: api/Weapon/{weapon.id}
+        // PUT: api/Weapon/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutWeapon(int id, Weapon weapon)
         {
@@ -70,7 +73,7 @@ namespace AspNetCoreWebApi6.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!_dbContext.Weapons.Any(e => e.Id == id))
+                if (!WeaponExists(id))
                 {
                     return NotFound();
                 }
@@ -83,21 +86,10 @@ namespace AspNetCoreWebApi6.Controllers
             return NoContent();
         }
 
-        private bool WeaponExists(int id)
-        {
-            return (_dbContext.Weapons?.Any(e => e.Id == id)).GetValueOrDefault();
-        }
-
-        // DELETE: api/Weapon/{weapon.id}
+        // DELETE: api/Weapon/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteWeapon(int id)
         {
-
-            if (_dbContext.Weapons == null)
-            {
-                return NotFound();
-            }
-
             var weapon = await _dbContext.Weapons.FindAsync(id);
             if (weapon == null)
             {
@@ -108,6 +100,11 @@ namespace AspNetCoreWebApi6.Controllers
             await _dbContext.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        private bool WeaponExists(int id)
+        {
+            return _dbContext.Weapons.Any(e => e.Id == id);
         }
     }
 }

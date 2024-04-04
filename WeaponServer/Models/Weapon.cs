@@ -10,6 +10,7 @@
         public int MagazineCapacity { get; set; }  // Magazine Capacity
         public int FireRate { get; set; }  // Fire Rate (rounds per minute)
         public int AmmoCount { get; set; } = 0;  // Current ammo count in the magazine
+        public string? Images { get; set; }   // URL of picture of the weapon
     }
 
 }

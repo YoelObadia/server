@@ -21,7 +21,7 @@ namespace WeaponServer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("WeaponServer.Models.Weapon", b =>
+            modelBuilder.Entity("AspNetCoreWebApi6.Models.Weapon", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,6 +37,9 @@ namespace WeaponServer.Migrations
 
                     b.Property<int>("FireRate")
                         .HasColumnType("int");
+
+                    b.Property<string>("Images")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MagazineCapacity")
                         .HasColumnType("int");
