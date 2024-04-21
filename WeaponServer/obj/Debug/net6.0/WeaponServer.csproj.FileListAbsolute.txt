@@ -144,3 +144,5 @@ C:\Users\iobad\Source\Repos\YoelObadia\server\WeaponServer\bin\Debug\net6.0\Rest
 C:\Users\iobad\Source\Repos\YoelObadia\server\WeaponServer\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\iobad\Source\Repos\YoelObadia\server\WeaponServer\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\iobad\Source\Repos\YoelObadia\server\WeaponServer\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\iobad\source\repos\YoelObadia\server\WeaponServer\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\iobad\source\repos\YoelObadia\server\WeaponServer\bin\Debug\net6.0\OpenAI.API.dll

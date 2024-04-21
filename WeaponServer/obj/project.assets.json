@@ -15,6 +15,19 @@
           }
         }
       },
+      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -542,6 +555,19 @@
           }
         }
       },
+      "OpenAI.API/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "compile": {
+          "lib/net6.0/OpenAI.API.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/OpenAI.API.dll": {}
+        }
+      },
       "RestSharp/110.2.0": {
         "type": "package",
         "dependencies": {
@@ -1008,6 +1034,29 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "sha512": "3aeMZ1N0lJoSyzqiP03hqemtb1BijhsJADdobn/4nsMJ8V1H+CrpuduUe4hlRdx+ikBQju1VGjMD1GJ3Sk05Eg==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Bcl.AsyncInterfaces.targets",
+        "buildTransitive/net462/_._",
+        "lib/net462/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net462/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -2006,6 +2055,21 @@
         "packageIcon.png"
       ]
     },
+    "OpenAI.API/1.0.0": {
+      "sha512": "Igq+XLmc5Y2FvJEmg/BUPbdhzohkDJCXpFsRtebU/gZV5kOd6ZMb1ZPpDVzzkG0n8OhyNq85J9v5VhOAP5dfxQ==",
+      "type": "package",
+      "path": "openai.api/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "C-Sharp-OpenAPI.png",
+        "MIT-LICENSE.txt",
+        "README.md",
+        "lib/net6.0/OpenAI.API.dll",
+        "openai.api.1.0.0.nupkg.sha512",
+        "openai.api.nuspec"
+      ]
+    },
     "RestSharp/110.2.0": {
       "sha512": "FXGw0IMcqY7yO/hzS9QrD3iNswNgb9UxJnxWmfOxmGs4kRlZWqdtBoGPLuhlbgsDzX1RFo4WKui8TGGKXWKalw==",
       "type": "package",
@@ -2758,6 +2822,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.27",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.27",
       "Newtonsoft.Json >= 13.0.3",
+      "OpenAI.API >= 1.0.0",
       "RestSharp >= 110.2.0",
       "RestSharp.Newtonsoft.Json >= 1.5.0",
       "RestSharp.Serializers.NewtonsoftJson >= 110.2.0",
@@ -2772,9 +2837,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iobad\\Source\\Repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
+      "projectUniqueName": "C:\\Users\\iobad\\source\\repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
       "projectName": "WeaponServer",
-      "projectPath": "C:\\Users\\iobad\\Source\\Repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
+      "projectPath": "C:\\Users\\iobad\\source\\repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
       "packagesPath": "C:\\Users\\iobad\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\iobad\\source\\repos\\YoelObadia\\server\\WeaponServer\\obj\\",
       "projectStyle": "PackageReference",
@@ -2832,6 +2897,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "OpenAI.API": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           },
           "RestSharp": {
             "target": "Package",
