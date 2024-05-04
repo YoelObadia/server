@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeaponServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65dfa67511219bc992fa96746cafa3fea667549f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+999319e28b55bd61c288da568b0ce401860f0edf")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeaponServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeaponServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
