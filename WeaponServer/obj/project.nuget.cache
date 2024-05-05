@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LsoOHXhAs61jOOmZTWZjWx8xS1RtjuP6/gtQ7ZBly4iqDFD6BaFkaX4uhtE6m6bkWYg+Px2h8AlzUMpTe3fqog==",
+  "dgSpecHash": "KZfsgbbJbGt0U50Au8o88HT7+CoDgG0pIjHl9tPIqB5bTfczS14jcQRTSvNgh41T2KvGRgMo0iF8A+2AO36UvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\iobad\\Source\\Repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
+  "projectFilePath": "C:\\Users\\iobad\\source\\repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iobad\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\iobad\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

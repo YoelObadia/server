@@ -6,6 +6,7 @@ namespace WeaponServer.Migrations
 {
     public partial class Initial : Migration
     {
+        // Create the Weapons table
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -29,6 +30,7 @@ namespace WeaponServer.Migrations
                 });
         }
 
+        // Drop the Weapons table
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

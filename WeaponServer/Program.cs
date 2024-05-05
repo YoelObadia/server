@@ -9,7 +9,7 @@ namespace WeaponServer
         {
             var builder = WebApplication.CreateBuilder(args);
         
-            // Add services to the container.
+            // Add services to the container and configure the application. 
             builder.Services.AddDbContext<WeaponContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("WeaponContext"));

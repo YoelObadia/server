@@ -2,7 +2,6 @@
 using RestSharp;
 using AspNetCoreWebApi6.Models;
 using System.Text.Json;
-using System.Collections.Generic;
 
 namespace WeaponServer.Controllers
 {
@@ -25,17 +24,26 @@ namespace WeaponServer.Controllers
         {
             var matchingWeapons = new HashSet<Weapon>();
 
-            // Comparaison avec Imagga
+            // Recuparate the image urls from database to share with Imagga
             var allImages = _dbContext.Weapons.Select(w => w.Images).ToList();
+
+            // Imagga API credentials
             string apiKey = "acc_363d732b2281b6e";
             string apiSecret = "d54ee367e04f912255db312689a2fe10";
+
+            // Encode the credentials to base64
             string basicAuthValue = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes($"{apiKey}:{apiSecret}"));
 
+            // Call Imagga API
             var client = new RestClient("https://api.imagga.com/v2/tags");
+
+            // Create a request to Imagga
             var request = new RestRequest(new Uri("https://api.imagga.com/v2/tags"), Method.Get);
+
+            // Add the Authorization header
             request.AddHeader("Authorization", $"Basic {basicAuthValue}");
 
-            // Envoyer les URLs à Imagga
+            // Share URLs to Imagga to get tags for each image and compare with the keyword
             foreach (var imageUrl in allImages)
             {
                 request.AddOrUpdateParameter("image_url", imageUrl!, ParameterType.QueryString);
@@ -62,18 +70,18 @@ namespace WeaponServer.Controllers
                 }
             }
 
-            // Comparaison dans la base de données
+            // Comparison with database
             var allWeapons = _dbContext.Weapons.ToList(); // Chargement des données depuis la base de données
             var localMatches = allWeapons
                 .Where(w =>
-                    w.Name!.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 || // Utilisation de IndexOf pour la comparaison insensible à la casse
+                    w.Name!.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 || 
                     w.Type!.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
                     w.Manufacturer!.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
                     w.Caliber!.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0
                 )
-                .ToList(); // Application du filtre en mémoire
-            
-            // Ajouter les correspondances locales sans doublons
+                .ToList();
+
+            // Add local matches without duplicates
             foreach (var weapon in localMatches)
             {
                 matchingWeapons.Add(weapon);

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iobad\\Source\\Repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj": {}
+    "C:\\Users\\iobad\\source\\repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iobad\\Source\\Repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj": {
+    "C:\\Users\\iobad\\source\\repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iobad\\Source\\Repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
+        "projectUniqueName": "C:\\Users\\iobad\\source\\repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
         "projectName": "WeaponServer",
-        "projectPath": "C:\\Users\\iobad\\Source\\Repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
+        "projectPath": "C:\\Users\\iobad\\source\\repos\\YoelObadia\\server\\WeaponServer\\WeaponServer.csproj",
         "packagesPath": "C:\\Users\\iobad\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\iobad\\Source\\Repos\\YoelObadia\\server\\WeaponServer\\obj\\",
         "projectStyle": "PackageReference",
