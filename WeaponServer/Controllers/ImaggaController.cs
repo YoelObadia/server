@@ -66,7 +66,7 @@ namespace WeaponServer.Controllers
                 }
                 else
                 {
-                    _logger.LogError($"Erreur lors de l'appel à Imagga: {response.Content}");
+                    _logger.LogError($"Error when calling Imagga: {response.Content}");
                 }
             }
 
