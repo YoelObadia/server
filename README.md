@@ -5,7 +5,7 @@ The serve is divided in 3 parts.
 The first part is a restfull web API with ASP.NET 6. I did all the steps of the following site https://medium.com/net-core/build-a-restful-web-api-with-asp-net-core-6-30747197e229. 
 I adapted for my project and I used Weapons rather than moovies.
 However, the features are same and the use of the database too.
-The controller WeaponController is like MOoovieController in the site. Just names changes.
+The controller WeaponController is like MOoovieController in the site. Just names changes. To initialize the database, I ran the file dbo.Weapons.data.sql. 
 
 The second part is the ImaggaController. Imagga is an Image Recognition Application.
 I created an account to get an API key and API secret key to use the API of Imagga. 
