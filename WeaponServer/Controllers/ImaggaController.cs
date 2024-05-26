@@ -28,8 +28,8 @@ namespace WeaponServer.Controllers
             var allImages = _dbContext.Weapons.Select(w => w.Images).ToList();
 
             // Imagga API credentials
-            string apiKey = "acc_363d732b2281b6e";
-            string apiSecret = "d54ee367e04f912255db312689a2fe10";
+            string apiKey = ""; // Enter your API key from Imagga
+            string apiSecret = ""; // Enter your API secret key from Imagga
 
             // Encode the credentials to base64
             string basicAuthValue = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes($"{apiKey}:{apiSecret}"));
@@ -71,7 +71,7 @@ namespace WeaponServer.Controllers
             }
 
             // Comparison with database
-            var allWeapons = _dbContext.Weapons.ToList(); // Chargement des données depuis la base de données
+            var allWeapons = _dbContext.Weapons.ToList(); // Loading data from the database
             var localMatches = allWeapons
                 .Where(w =>
                     w.Name!.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 || 
