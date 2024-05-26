@@ -13,7 +13,7 @@ namespace WeaponServer.Controllers
         public ChatGPTController()
         {
             // OpenAI API key
-            var apiKey = "sk-proj-6sxvn51HbGYugBK0e8AVT3BlbkFJkcKe0hagKuqhtkCYvJgR"; 
+            var apiKey = ""; // Enter your API key from OpanAI
             _openAiApi = new OpenAIAPI(apiKey);
         }
 
@@ -33,7 +33,7 @@ namespace WeaponServer.Controllers
                 var completionRequest = new CompletionRequest
                 {
                     Prompt = request.Message,
-                    Model = "gpt-3.5-turbo",  
+                    Model = "",  // Enter a valid model according to your credential account
                     MaxTokens = 100,
                     Temperature = 0.7,
                     TopP = 1.0,
@@ -50,7 +50,7 @@ namespace WeaponServer.Controllers
             
             catch (Exception ex)
             {
-                return StatusCode(500, $"Erreur du serveur : {ex.Message}");
+                return StatusCode(500, $"Server error : {ex.Message}");
             }
         }
     }
